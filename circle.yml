@@ -3,6 +3,10 @@ machine:
     version:
       oraclejdk8
 
+checkout:
+  post:
+    - chmod +x ./gradlew
+
 test:
   override:
     - ./gradlew test
