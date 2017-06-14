@@ -3,3 +3,7 @@
 - 構成
   + サーバ：SpringBoot
   + クライアント：C#.NET(WPF)
+- サーバ側はAPIを提供
+  + エンドポイント： /api/todo
+  + メソッド： get
+  + 返却： json
