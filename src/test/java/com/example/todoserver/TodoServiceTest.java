@@ -20,7 +20,7 @@ public class TodoServiceTest {
     }
     @Test
     public void findAll() throws Exception {
-        assertThat(todoService.findAll().isEmpty(), is(false));
+        assertThat(todoService.findAll().isEmpty(), is(true));
     }
 
 }
