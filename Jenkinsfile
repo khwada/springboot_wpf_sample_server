@@ -5,13 +5,18 @@ pipeline {
         stage('Test') {
             steps {
                 sh './gradlew check'
-                junit 'build/test-results/*.xml'
             }
         }
         stage('Build') {
             steps {
                 sh './gradlew jar'
             }
+        }
+    }
+    post {
+        always {
+            archive 'build/libs/*.jar'
+            junit 'build/test-results/**/*.xml'
         }
     }
 }
